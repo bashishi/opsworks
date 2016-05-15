@@ -1,0 +1,6 @@
+name             'base'
+maintainer       'YOUR_COMPANY_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'OSの基本的なツールやロケール設定のためのレシピ'
+version          '0.1.0'
