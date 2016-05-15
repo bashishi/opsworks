@@ -6,3 +6,12 @@ search("aws_opsworks_app").each do |app|
   Chef::Log.info("********** The app's short name is '#{app['shortname']}' **********")
   Chef::Log.info("********** The app's URL is '#{app['app_source']['url']}' **********")
 end
+
+git "/home/ec2-user/sampleApps" do
+  repository "#{app['app_source']['url']}"
+  action :clone
+end
+
+execute "commend" do
+  cwd "cp /home/ec2-user/sampleApps/* /var/www/html/"
+end
