@@ -9,7 +9,7 @@ end
 
 git "/home/ec2-user/sampleApps" do
   repository "#{app['app_source']['url']}"
-  action :clone
+  action :sync
 end
 
 execute "commend" do
